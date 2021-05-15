@@ -7,7 +7,7 @@ export const Rectangles = ({rectList}) => {
             {
                 rectList.length > 0 ?
                 rectList.map((rect) => (
-                    <Rectangle rect={rect}/>
+                    <Rectangle key={rect.id} rect={rect}/>
                     )) : 'No Data :('
             }
         </div>

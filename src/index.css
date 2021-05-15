@@ -45,7 +45,7 @@ body {
 
 .grid-element--active{
   opacity: 1;
-  border: .1rem solid rgba(182, 14, 182, 0.7);
+  border: .1rem solid hsla(300, 86%, 38%, 0.702);
   background-color: rgb(182, 14, 182, .3);
 }
 
@@ -84,4 +84,66 @@ body {
   width:8px;
   height:8px;
   background-color: white;
+}
+
+.small-target-analytics{
+  margin: 3rem;
+
+  flex-direction: column;
+
+}
+
+.progressBarContainer {
+  height: 1.5rem;
+  width: 100%;
+  background-color: #e0e0de;
+  border-radius: .5rem;
+  margin: .8rem 0;
+}
+
+.progressBarFilter{
+  height: 100%;
+  background-color: rgb(182, 14, 182);
+  border-radius: inherit;
+  text-align: right;
+}
+
+.progressBarLabel{
+  padding: 5;
+  color: white;
+  font-weight: bold;
+}
+
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: .8rem;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.small-target-analytics-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

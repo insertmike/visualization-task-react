@@ -6,6 +6,11 @@ export const Rectangle = ({rect}) => {
     const [active, setActive] = useState(localStorage.getItem(`rect-${rect.id}-active`) || false)
 
     const onActiveStatusChange = (active) => {
+        setActive(active);
+        if(!active){
+            localStorage.removeItem(`rect-${rect.id}-active`);
+            return;
+        }
         localStorage.setItem(`rect-${rect.id}-active`, active);
         setActive(active);
     }

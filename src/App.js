@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 
 import Header from './components/Header'
 import Rectangles from './components/Rectangles'
+import SmallTargetAnalytics from './components/SmallTargetAnalytics'
 
 function App() {
   const [rectangles, setRectangles] = useState([])
@@ -27,6 +28,9 @@ function App() {
   return (
     <div className="container">
       <Header/>
+      {
+        rectangles && <SmallTargetAnalytics rectList={rectangles}/>
+      }
       <Rectangles rectList={rectangles} />
     </div>
   );
