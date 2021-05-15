@@ -29,7 +29,7 @@ body {
 
 .grid-box{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   grid-gap: 1rem;
   grid-auto-rows: 10rem;
 }
@@ -39,22 +39,49 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  opacity: .6;
 }
 
-.rect-large{
+.grid-element--active{
+  opacity: 1;
+  border: .1rem solid rgba(182, 14, 182, 0.7);
+  background-color: rgb(182, 14, 182, .3);
+}
 
-  width: 70%;
-  height: 70%;
-  background: red;
+.grid-element:hover {
+  box-shadow: 0 0 0 .1rem #f4ffe5;
+  transition: 1s ease;
+}
+
+.rect{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rect--active{
+  opacity: 1;
+}
+
+
+
+.rect-large{
+  width: 60%;
+  height: 60%;
 }
 
 .rect-small{
-
   width: 30%;
   height: 30%;
-  background: green;
 }
 
 .dot{
-
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  border-radius:8px;
+  border:1px solid black;
+  width:8px;
+  height:8px;
+  background-color: white;
 }

@@ -1,11 +1,13 @@
 
+import {Rectangle} from "./Rectangle"
+
 export const Rectangles = ({rectList}) => {
     return (
         <div className="grid-box">
             {
                 rectList.length > 0 ?
                 rectList.map((rect) => (
-                    <div className="grid-element"> Rectangle :) </div>
+                    <Rectangle rect={rect}/>
                     )) : 'No Data :('
             }
         </div>
