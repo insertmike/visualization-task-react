@@ -20,7 +20,7 @@ export const SmallTargetAnalytics = ({rectList}) => {
 
         <div className="small-target-analytics">
             <div className="small-target-analytics-header">
-                <h4>Small Target Analytics</h4>
+                <h2>Small Target Analytics</h2>
                     <Button
                     text={showAnalytics ? 'Close' : 'Show'}
                     onClick={() => toggleShowButton(showAnalytics)}
