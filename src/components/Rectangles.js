@@ -1,4 +1,5 @@
 
+import {Rectangle} from "./Rectangle"
 
 export const Rectangles = ({rectList, onToggle, selectedRectIDs}) => {
 
