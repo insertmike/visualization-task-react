@@ -11,6 +11,7 @@ A task I developped during the weekend.
   3. npm start
 
 ## Overview
-![image](https://user-images.githubusercontent.com/45242072/118375543-1ffab280-b5ba-11eb-8f2d-234d863d4f09.png)
-![image](https://user-images.githubusercontent.com/45242072/118375551-28eb8400-b5ba-11eb-9ab4-bd7613bb262f.png)
-![image](https://user-images.githubusercontent.com/45242072/118375556-330d8280-b5ba-11eb-8523-8d90ae1b748a.png)
+![image](https://user-images.githubusercontent.com/45242072/118415030-e13f2800-b69f-11eb-947c-e8c1a69f9678.png)
+![image](https://user-images.githubusercontent.com/45242072/118415035-e8663600-b69f-11eb-96da-fcd52b88525b.png)
+![image](https://user-images.githubusercontent.com/45242072/118415037-edc38080-b69f-11eb-9d01-d8b5245a816f.png)
+
