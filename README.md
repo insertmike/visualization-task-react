@@ -3,17 +3,8 @@
 A task I developped during the weekend.
 
 **Note:** DB is pushed on purpose in order to be able to run the app. This is a mock app.
-## Features
- - Mocked Backend using json-server
- - Used localstorage to save selected items
 
-
- ## Things that need improvement
- - Visualization page logic
- - No state management
- - No clear separation of styling
-
-## Run
+## In Order to Run
 
   1. npm install
   2. npm run server

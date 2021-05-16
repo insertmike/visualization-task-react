@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body {
@@ -146,4 +146,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.small-target-analytics-body__box{
+  text-align: center;
 }

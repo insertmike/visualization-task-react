@@ -1,8 +1,8 @@
-
 const SmallTargetProgressBar = ({percentage}) => {
 
     const fillerStyles = {
         width: `${percentage}%`,
+        transition: 'width 1s ease-in-out',
     }
 
   return (

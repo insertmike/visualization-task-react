@@ -3,17 +3,29 @@ import SmallTargetProgressBar from './SmallTargetProgressBar'
 import { useState, useEffect } from 'react'
 import {Button} from './Button'
 
-export const SmallTargetAnalytics = ({rectList}) => {
-    const [selectedSmallRectanglesPercentage, setSelectedSmallRectPercentage] = useState(0)
+//selectedRectIDs={selectedRectIDs}
+
+export const SmallTargetAnalytics = ({rectList, selectedRectIDs}) => {
     const [showAnalytics, setShowAnalytics] =  useState(false)
+
+    const selectedSmallRect = rectList.filter((rect) => rect.size === "small" && selectedRectIDs.includes(rect.id) ).length
 
     const toggleShowButton = (value) => {
         setShowAnalytics(!value)
     }
+
     const calcTotalSmallRectangles = () => {
         let totalSmallRect = rectList.filter((item) => item.size === "small").length;
         let totalSmallRectPercentage = (totalSmallRect/rectList.length) * 100;
         return Math.floor(totalSmallRectPercentage,0);
+    }
+
+    const calcSelectedSmallRect = () => {
+
+
+        let selectedSmallRectPercentage = (selectedSmallRect / selectedRectIDs.length) * 100
+
+        return selectedSmallRectPercentage ? Math.floor(selectedSmallRectPercentage,0) : 0;
     }
 
     return (
@@ -30,15 +42,17 @@ export const SmallTargetAnalytics = ({rectList}) => {
             {
             showAnalytics &&
             <div className="small-target-analytics-body">
-                <br/>
-                <p>Percentage of small rectangles available:</p>
+                <div className="small-target-analytics-body__box">
+                    <h3><b>Actual:</b> {calcSelectedSmallRect()}%</h3>
+                    <h3><b>Difference:</b> {Math.abs(calcTotalSmallRectangles() - calcSelectedSmallRect())}%</h3>
+                </div>
+                <h3>Percentage of small rectangles available:</h3>
                 <SmallTargetProgressBar percentage={calcTotalSmallRectangles()} />
                 <br/>
-                <p>Percentage of selected small rectangles:</p>
-                <p>TBD</p>
+                <h3>Percentage of selected small rectangles:</h3>
+                <SmallTargetProgressBar percentage={calcSelectedSmallRect()} />
             </div>
             }
-
         </div>
     )
 }

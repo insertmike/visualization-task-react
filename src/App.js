@@ -9,6 +9,21 @@ import SmallTargetAnalytics from './components/SmallTargetAnalytics'
 function App() {
   const [rectangles, setRectangles] = useState([])
 
+  const [selectedRectIDs, setSelected] = useState([])
+
+  // Toggle Reminder
+  const  toggleRectangle = async (id) => {
+
+    if(selectedRectIDs.includes(id)){
+      setSelected(selectedRectIDs.filter((currId) => currId != id))
+
+    } else {
+      setSelected([...selectedRectIDs, id])
+    }
+
+
+  }
+
   useEffect(() => {
     const getTasks = async () => {
       const rectanglesFromServer = await fetchRectangles()
@@ -17,7 +32,6 @@ function App() {
 
     getTasks()
   }, [])
-
 
   const fetchRectangles = async () => {
     const res = await fetch(ENV.SERVER_URL + ENV.RECTANGLE_LIST_PATH)
@@ -29,9 +43,9 @@ function App() {
     <div className="container">
       <Header/>
       {
-        rectangles && <SmallTargetAnalytics rectList={rectangles}/>
+        rectangles && <SmallTargetAnalytics selectedSmall rectList={rectangles} selectedRectIDs={selectedRectIDs}/>
       }
-      <Rectangles rectList={rectangles} />
+      <Rectangles rectList={rectangles} selectedRectIDs={selectedRectIDs} onToggle={toggleRectangle} />
     </div>
   );
 }
