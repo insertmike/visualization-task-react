@@ -45,9 +45,9 @@ function App() {
     <div className="container">
       <Header/>
       {
-        rectangles && <SmallTargetAnalytics selectedSmall rectList={rectangles} selectedRectIDs={selectedRectIDs}/>
+        rectangles && <SmallTargetAnalytics rectList={rectangles} selectedRectIDs={selectedRectIDs}/>
       }
-      <Rectangles rectList={rectangles} selectedRectIDs={selectedRectIDs} onToggle={toggleRectangle} />
+      <Rectangles rectList={rectangles} selectedRectIDs={selectedRectIDs} onToggleRect={toggleRectangle} />
     </div>
   );
 }
